@@ -8,7 +8,7 @@ const forecast = (lat,long,callback)=>{
         else if(response.body.error)
             callback(response.body.error.info,undefined)
         else
-            callback(undefined,response.body.current.weather_descriptions[0]+'. It is currently '+response.body.current.temperature+' degrees but it feels like '+response.body.current.feelslike+' degrees.'
+            callback(undefined,response.body.current.weather_descriptions[0]+'. It is currently '+response.body.current.temperature+' degrees but it feels like '+response.body.current.feelslike+' degrees. The humidity is '+response.body.current.humidity+'%.'
             )
         })
 }
